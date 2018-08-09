@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+
+    {% for score in scores %}
+        <div class="row high-scores">
+            <div class="col-1"><!-- Spacing --></div>
+            <div class="col-1 high-scores-place">
+                {{ loop.index }}
+            </div>
+            <div class="col-4 text-center">
+                <b>{{ score.alias }}</b>
+            </div>
+            <div class="col-4 text-center">
+                {{ score.score }}
+            </div>
+            <div class="col-2"><!-- Spacing --></div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="row" id="random-clue">
+        <div class="col-7 text-center">
+            <p>${{ clue.value.value }}</p>
+            <h4>{{ clue.question|safe }}</h4>
+            <p>
+                <small id="random-clue-hover-hint">Hover below to see answer:</small><br>
+                <a id="random-clue-answer">{{ clue.answer }}</a>
+            </p>
+        </div>
+
+        <div class="col-1"><!-- Spacer --></div>
+
+        <div class="col-4 text-right">
+            <div id="random-clue-info">
+                <small>Round: {{ clue.round.name }}</small><br>
+                <small>Category: {{ clue.category.name }}</small><br>
+                <small>Show #: {{ clue.air_date.show_num }}</small><br>
+                <small>Air Date: {{ clue.air_date.air_date }}</small>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

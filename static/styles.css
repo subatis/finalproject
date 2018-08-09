@@ -1,0 +1,218 @@
+/* Ensure elements span entire page */
+
+html, body
+{
+    height: 100%;
+    background-color: #060CE9;
+}
+
+/* Header and navigation */
+
+#banner
+{
+    background-color: #060CE9;
+    height: 10vw;
+}
+
+#banner-jeopardy-logo
+{
+    height: 10vw;
+}
+
+.navbar-custom
+{
+    background-color: #04089b !important;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text
+{
+    color: white;
+    font-family: Helvetica;
+}
+
+.navbar-custom .navbar-nav .nav-link
+{
+    color: white;
+    font-family: Helvetica;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-text
+{
+    color: #FFD700 !important;
+    font-family: Helvetica;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover
+{
+    color: #FFD700 !important;
+    font-family: Helvetica;
+}
+
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-text
+{
+    color: #FFD700 !important;
+    font-family: Helvetica;
+}
+
+.navbar-custom .navbar-nav .nav-link:active
+{
+    color: #FFD700 !important;
+    font-family: Helvetica;
+}
+
+.navbar-custom .navbar-brand:visited,
+.navbar-custom .navbar-text
+{
+    color: white;
+    font-family: Helvetica;
+}
+
+.navbar-custom .navbar-nav .nav-link:visited
+{
+    color: white;
+    font-family: Helvetica;
+}
+
+#player-score
+{
+    color: white;
+    font-family: Georgia;
+    font-size: 1.5vw;
+}
+
+/* Homepage - random clues */
+
+#random-clue
+{
+    background-color: #060CE9;
+    color: white;
+    font-family: Georgia;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+}
+
+#random-clue-answer
+{
+    color: #060CE9;
+}
+
+#random-clue-answer:hover
+{
+    color: white;
+}
+
+#random-clue-hover-hint
+{
+    color: #FFD700;
+}
+
+#random-clue-info
+{
+    padding: 0.5em;
+}
+
+/* Game board */
+
+#game-board
+{
+    font-family: Helvetica;
+    background-color: #060CE9;
+    color: white;
+}
+
+.jeopardy-square
+{
+    width: 100%;
+    height: 100%;
+    min-height: 6vw;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.board-categories
+{
+    color: white;
+    font-size: 1.5vw;
+}
+
+.board-clues
+{
+    color: #FFD700;
+    font-size: 3vw;
+}
+
+.game-clue-unanswered:hover
+{
+    background-color: #04089b;
+    cursor: pointer;
+}
+
+/* Question view */
+
+.game-clue-category-and-value
+{
+    color: #FFD700 !important;
+    font-weight: bold;
+}
+
+.jeopardy-clue-question
+{
+    background-color: #060CE9;
+    color: white;
+    font-family: Georgia;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    padding: 4vw;
+}
+
+#txt-answer-input, #txt-wager-input
+{
+    width: 50%;
+}
+
+#final-jeopardy-title
+{
+    color: #FFD700 !important;
+    font-weight: bold;
+}
+
+#final-jeopardy-category
+{
+    padding: 4vw;
+}
+
+.final-score
+{
+    color: #FFD700 !important;
+    padding: 4vw;
+}
+
+#thanks-for-playing
+{
+    padding: 4vw;
+}
+
+.high-scores
+{
+    color: white;
+}
+
+.high-scores-place
+{
+    color: #FFD700 !important;
+    font-weight: bold;
+}
+
+/* About page */
+
+.about-page
+{
+    color: #FFD700 !important;
+}

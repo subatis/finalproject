@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+    <!-- Socket IO JS -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+
+    <!-- Handlebars & Templates -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+    <!-- Jeopardy Square -->
+    <script type="text/x-handlebars-template" id="template-jeopardy-square">
+    {% raw -%}
+
+        <div class="col-2 {{ answered_or_unanswered }} text-center" id="{{ id }}">
+            <div class="jeopardy-square">
+                {{ text }}
+            </div>
+        </div>
+
+    {%- endraw %}
+    </script>
+
+    <!-- Question view -->
+    <script type="text/x-handlebars-template" id="template-jeopardy-clue-view">
+    {% raw -%}
+
+        <div class="row">
+            <div class="col-12 game-clue-category-and-value text-center">
+                {{ category }} for ${{ value }}
+            </div>
+        </div>
+
+        <div class="row" id="game-clue">
+            <div class="col-12 jeopardy-clue-question text-center">
+                {{{ question }}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <form class="form-inline justify-content-center">
+                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="txt-answer-input" placeholder="Type answer"></input>
+                    <button type="submit" class="btn btn-primary" id="btn-answer-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    {%- endraw %}
+    </script>
+
+    <!-- Jeopardy Final Jeopardy Wager View -->
+    <script type="text/x-handlebars-template" id="template-final-jeopardy-wager">
+    {% raw -%}
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 id="final-jeopardy-title">Final Jeopardy</h3>
+                <h5 id="final-jeopardy-category">Category: {{ category }}</h5>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <form class="form-inline justify-content-center">
+                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="txt-wager-input" placeholder="Type wager"></input>
+                    <button type="submit" class="btn btn-primary" id="btn-wager-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    {%- endraw %}
+    </script>
+
+    <!-- Jeopardy Final Jeopardy Clue View -->
+    <script type="text/x-handlebars-template" id="template-final-jeopardy-clue">
+    {% raw -%}
+
+        <div class="row">
+            <div class="col-6 text-center">
+                <b>{{ category }}</b>
+            </div>
+            <div class="col-6 text-center">
+                Wager: ${{ wager }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center jeopardy-clue-question">
+                {{ question }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <form class="form-inline justify-content-center">
+                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="txt-answer-input" placeholder="Type answer"></input>
+                    <button type="submit" class="btn btn-primary" id="btn-answer-submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    {%- endraw %}
+    </script>
+
+    <!-- My javascript -->
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+
+{% endblock %}
+
+{% block body %}
+
+    <!-- Show loading message when page loads until board is created/rendered -->
+    <div id="game-board">Loading board...</div>
+
+{% endblock %}

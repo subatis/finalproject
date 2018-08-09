@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-12 text-center about-page">
+            <p>By Erik Subatis, for <a href="https://cs50.github.io/web/">CSCI S-33a</a> - Summer 2018</p>
+            <p>
+                Jeopardy clues courtesy of <a href="http://j-archive.com/">J! Archive</a>, via
+                <a href="https://www.reddit.com/r/datasets/comments/1uyd0t/200000_jeopardy_questions_in_a_json_file/">this file</a>
+            </p>
+            <p>Jeopardy home: <a href="https://www.jeopardy.com/">www.jeopardy.com</a></p>
+            <p>Web app powered by Flask, Socket IO, SQLAlchemy and SQLite</p>
+            <p>Thanks to <a href="https://github.com/seatgeek/fuzzywuzzy">Fuzzy Wuzzy</a> for fuzzy string matching functionality</p>
+        </div>
+    </div>
+
+{% endblock %}
